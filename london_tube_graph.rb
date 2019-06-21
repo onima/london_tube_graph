@@ -1,7 +1,6 @@
 require 'nokogiri'
 require 'ruby-graphviz'
 require 'pry'
-require './tubeline.rb'
 require './london_tube.rb'
 
 tube_lines =
