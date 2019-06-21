@@ -1,4 +1,4 @@
-require './tube_line.rb'
+require_relative './tube_line.rb'
 
 class LondonTube
   attr_reader :lines_stations_with_stop_point_reference, :lines_routes_links

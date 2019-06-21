@@ -1,7 +1,7 @@
 require 'nokogiri'
 require 'ruby-graphviz'
 require 'pry'
-require './london_tube.rb'
+require './models/london_tube.rb'
 
 tube_lines =
   [
