@@ -25,9 +25,9 @@ g = GraphViz.new( :G, :type => :digraph)
 existing_nodes = []
 existing_edges = []
 
-london_tube.route_links.each do |rl|
-  from = london_tube.coordinates.fetch(rl[:from])
-  to = london_tube.coordinates.fetch(rl[:to])
+london_tube.lines_routes_links.each do |rl|
+  from = london_tube.lines_stations_with_stop_point_reference.fetch(rl[:from])
+  to = london_tube.lines_stations_with_stop_point_reference.fetch(rl[:to])
 
   unless existing_nodes.include?(from)
     g.add_nodes(from)

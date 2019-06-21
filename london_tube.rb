@@ -1,14 +1,14 @@
 require './tube_line.rb'
 
 class LondonTube
-  attr_reader :coordinates, :route_links
+  attr_reader :lines_stations_with_stop_point_reference, :lines_routes_links
 
   def initialize(tube_lines)
-    @coordinates =
+    @lines_stations_with_stop_point_reference =
       tube_lines.each_with_object({}) do |tl, h|
         h.merge!(Tubeline.new(tl).stations_with_stop_point_reference)
       end
-    @route_links =
+    @lines_routes_links =
       tube_lines.each_with_object([]) do |tl, a|
         a << Tubeline.new(tl).routes_links
       end.flatten
