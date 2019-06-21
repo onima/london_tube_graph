@@ -3,22 +3,8 @@ require 'ruby-graphviz'
 require 'pry'
 require './models/london_tube.rb'
 
-tube_lines =
-  [
-    "./londonmetro/jubilee.xml",
-    "./londonmetro/northern.xml",
-    "./londonmetro/bakerloo.xml",
-    "./londonmetro/central.xml",
-    "./londonmetro/circle.xml",
-    "./londonmetro/district.xml",
-    "./londonmetro/hammersmith.xml",
-    "./londonmetro/metropolitan.xml",
-    "./londonmetro/picadilly.xml",
-    "./londonmetro/victoria.xml",
-    "./londonmetro/waterloo.xml"
-  ]
 
-london_tube = LondonTube.new(tube_lines)
+london_tube = LondonTube.new
 
 g = GraphViz.new( :G, :type => :digraph)
 
